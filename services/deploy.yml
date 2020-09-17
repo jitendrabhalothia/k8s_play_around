@@ -1,0 +1,6 @@
+---
+- name: Creating deployments for Kubernetes
+  hosts: kubernetes
+  connection: local
+  import_playbook: plpaybook.yml
+
