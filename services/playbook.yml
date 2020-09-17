@@ -1,0 +1,49 @@
+- name: Create a Grafana Deployment by reading the definition from a local file
+  k8s:
+    state: present
+    src: ./grafana/grafana-configmap.yaml
+
+- name: Create a Grafana Deployment by reading the definition from a local file
+  k8s:
+    state: present
+    src: ./grafana/service.yaml
+
+- name: Create a Grafana Deployment by reading the definition from a local file
+  k8s:
+    state: present
+    src: ./grafana/deployment.yaml
+
+
+
+- name: Create a prometheus Deployment by reading the definition from a local file
+  k8s:
+    state: present
+    src: ./prometheus/prometheus.yml
+
+- name: Create a prometheus Deployment by reading the definition from a local file
+  k8s:
+    state: present
+    src: ./prometheus/deployment.yml
+
+- name: Create a prometheus Deployment by reading the definition from a local file
+  k8s:
+    state: present
+    src: ./prometheus/svc.yml
+
+
+
+- name: Create a Mysql Deployment by reading the definition from a local file
+  k8s:
+    state: present
+    src: ./mysql/storage.py
+
+- name: Create a Mysql Deployment by reading the definition from a local file
+  k8s:
+    state: present
+    src: /mysql/mysql_exporter.yml
+
+- name: Create a Mysql Deployment by reading the definition from a local file
+  k8s:
+    state: present
+    src: /mysql/secret.yml
+    
